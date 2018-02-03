@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Lora|Anton');
+
+// Variables
+@import "variables";
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+@mixin animate($name, $duration,$ease, $iteration, $direction) {
+  -webkit-animation-duration: $duration;
+     -moz-animation-duration: $duration;
+       -o-animation-duration: $duration;
+          animation-duration: $duration;
+  -webkit-animation-iteration-count: $iteration;
+     -moz-animation-iteration-count: $iteration;
+       -o-animation-iteration-count: $iteration;
+          animation-iteration-count: $iteration;
+  -webkit-animation-iteration-count: $ease;
+     -moz-animation-iteration-count: $ease;
+       -o-animation-iteration-count: $ease;
+          animation-iteration-count: $ease;
+  -webkit-animation-name: $name;
+     -moz-animation-name: $name;
+       -o-animation-name: $name;
+          animation-name: $name;
+  -webkit-animation-direction: $direction;
+     -moz-animation-direction: $direction;
+       -o-animation-direction: $direction;
+          animation-direction: $direction;
+}
+@include keyframes(zoomA) {
+  from {
+    background-size: 100% 100%;
+  }
+  to {
+    background-size: 105% 105%;
+  }
+}
+@mixin zoomA {
+  @include animate(zoomA, 6s, infinite, linear, alternate);
+}
+@include keyframes(zoomB) {
+  from {
+    background-size: 270% 100%;
+    // background-position: 58%
+  }
+  to {
+    background-size: 274% 105%;
+    // background-position: 68%
+  }
+}
+@mixin zoomB {
+  @include animate(zoomB, 6s,linear, infinite, alternate);
+}
+// Bootstrap
+$text-primary-color: white;
+$primary-color:#052958;
+%font-text{
+ font-family:'Lora',serif;
+}
+%font-titles{
+ font-family: 'Anton', sans-serif;
+}
+body,html{
+  @extend %font-text;
+  // overflow: hidden;
+}
+h1,h2,h3,h4,h5{
+  @extend %font-titles;
+}
+.landing{
+  overflow: hidden;
+  will-change: contents;
+}
+.fill {
+  min-width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  background-image: url('/../img/background.png');
+  background-position: top;
+  background-size:100% 100%;
+  background-repeat: no-repeat;
+  filter: blur(2px);
+  @include zoomA;
+  }
+.header {
+  margin: -100vh 0 0 0;
+  border:solid 1px $text-primary-color;
+  border-width: 0 1px 0 1px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.background{
+  display: flex;
+  min-height: 100vh;
+  margin: -100vh 0 0 0;
+}
+#particles-js{
+  filter: blur(0);
+  }
+.background div:first-child{
+  flex:2;
+}
+.background div:not(.fill-background){
+  background-color: #00339A;
+  opacity: .1;
+}
+.background div:last-child{
+  flex: 1.4;
+}
+.fill-background{
+  background-image: url('/../img/background.png');
+  background-size: 270% 100%;
+  background-repeat: no-repeat;
+  background-position: 58% 0;
+  filter:blur(0px);
+  flex: 2;
+  @include zoomB;
+
+}
+.menu{
+  top: 0%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.5em;
+}
+.company{
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  color:$text-primary-color;
+  font-weight: bold;
+}
+.company span:last-child{
+  margin: -15px 0 0 40px
+}
+.links-container{
+  padding: 10px 0 0 0;
+}
+.links-container a{
+  padding:0 15px 5px 15px;
+  font-size: 1em;
+  color:$text-primary-color;
+  margin: 0 5px;
+}
+.links-container a:hover{
+  text-decoration: none;
+  border-bottom: 2px solid $text-primary-color;
+  font-weight: bold;
+}
+.links-container a.active-menu{
+  border-bottom: 2px solid $text-primary-color;
+  font-weight: bold;
+}
+.links-container .btn.btn-outline-primary{
+  border-color: $text-primary-color;
+  padding: 8px 15px;
+  margin: -10px 0;
+  vertical-align: baseline;
+  border-width: 1.5px;
+}
+.links-container .btn.btn-outline-primary:hover{
+  border-color: $text-primary-color;
+  background-color: $primary-color
+}
+.messages-container{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+h1.title{
+  color: $text-primary-color;
+  margin-left: 40px;
+}
+h4.text-contain{
+  color: $text-primary-color;
+  font-weight: normal;
+  @extend %font-text;
+  font-size: 1.1rem;
+}
+.rectangle{
+  border: solid 3px $text-primary-color;
+  width:50px;
+}
+.rectangle-min{
+  border: solid 1px $text-primary-color;
+  width:100px
+}
+.rectangle-container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.social-container{
+  display: flex;
+  justify-content: flex-end;
+}
+.social-container a {
+  color: $text-primary-color;
+  font-size: 1.5em;
+  margin: 0 30px 10px 0;
+}
