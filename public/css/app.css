@@ -13263,41 +13263,25 @@ a.text-gray-dark:hover {
 
 @-webkit-keyframes zoomA {
   from {
-    background-size: 100% 100%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 
   to {
-    background-size: 105% 105%;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 
 @keyframes zoomA {
   from {
-    background-size: 100% 100%;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 
   to {
-    background-size: 105% 105%;
-  }
-}
-
-@-webkit-keyframes zoomB {
-  from {
-    background-size: 270% 100%;
-  }
-
-  to {
-    background-size: 274% 105%;
-  }
-}
-
-@keyframes zoomB {
-  from {
-    background-size: 270% 100%;
-  }
-
-  to {
-    background-size: 274% 105%;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
   }
 }
 
@@ -13330,16 +13314,6 @@ h5 {
   background-repeat: no-repeat;
   -webkit-filter: blur(2px);
           filter: blur(2px);
-  -webkit-animation-duration: 6s;
-  animation-duration: 6s;
-  -webkit-animation-iteration-count: linear;
-  animation-iteration-count: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-name: zoomA;
-  animation-name: zoomA;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
 }
 
 .header {
@@ -13386,6 +13360,20 @@ h5 {
           flex: 1.4;
 }
 
+.container-fill {
+  will-change: transform;
+  -webkit-animation-duration: 12s;
+  animation-duration: 12s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: zoomA;
+  animation-name: zoomA;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
 .fill-background {
   background-image: url("/../img/background.png");
   background-size: 270% 100%;
@@ -13396,16 +13384,6 @@ h5 {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  -webkit-animation-duration: 6s;
-  animation-duration: 6s;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: linear;
-  animation-iteration-count: linear;
-  -webkit-animation-name: zoomB;
-  animation-name: zoomB;
-  -webkit-animation-direction: alternate;
-  animation-direction: alternate;
 }
 
 .menu {

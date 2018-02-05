@@ -27,10 +27,10 @@
      -moz-animation-iteration-count: $iteration;
        -o-animation-iteration-count: $iteration;
           animation-iteration-count: $iteration;
-  -webkit-animation-iteration-count: $ease;
-     -moz-animation-iteration-count: $ease;
-       -o-animation-iteration-count: $ease;
-          animation-iteration-count: $ease;
+  -webkit-animation-timing-function: $ease;
+     -moz-animation-timing-function: $ease;
+       -o-animation-timing-function: $ease;
+          animation-timing-function: $ease;
   -webkit-animation-name: $name;
      -moz-animation-name: $name;
        -o-animation-name: $name;
@@ -42,28 +42,16 @@
 }
 @include keyframes(zoomA) {
   from {
-    background-size: 100% 100%;
+    transform: scale(1);
   }
   to {
-    background-size: 105% 105%;
+    transform: scale(1.1);
   }
 }
 @mixin zoomA {
-  @include animate(zoomA, 6s, infinite, linear, alternate);
+  @include animate(zoomA, 12s, linear,infinite, alternate);
 }
-@include keyframes(zoomB) {
-  from {
-    background-size: 270% 100%;
-    // background-position: 58%
-  }
-  to {
-    background-size: 274% 105%;
-    // background-position: 68%
-  }
-}
-@mixin zoomB {
-  @include animate(zoomB, 6s,linear, infinite, alternate);
-}
+
 // Bootstrap
 $text-primary-color: white;
 $primary-color:#052958;
@@ -93,7 +81,6 @@ h1,h2,h3,h4,h5{
   background-size:100% 100%;
   background-repeat: no-repeat;
   filter: blur(2px);
-  @include zoomA;
   }
 .header {
   margin: -100vh 0 0 0;
@@ -121,6 +108,10 @@ h1,h2,h3,h4,h5{
 .background div:last-child{
   flex: 1.4;
 }
+.container-fill{
+  will-change: transform;
+  @include zoomA;
+}
 .fill-background{
   background-image: url('/../img/background.png');
   background-size: 270% 100%;
@@ -128,7 +119,6 @@ h1,h2,h3,h4,h5{
   background-position: 58% 0;
   filter:blur(0px);
   flex: 2;
-  @include zoomB;
 
 }
 .menu{

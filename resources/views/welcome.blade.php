@@ -15,11 +15,13 @@
     <body>
       <div id="app">
         <section class="landing">
-          <div class="fill"></div>
-          <div class="background">
-            <div></div>
-            <div class="fill-background"></div>
-            <div></div>
+          <div class="container-fill">
+            <div class="fill"></div>
+            <div class="background">
+              <div></div>
+              <div class="fill-background"></div>
+              <div></div>
+            </div>
           </div>
           <div class="background" id="particles-js"></div>
           <div class="container">
