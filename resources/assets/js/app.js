@@ -22,7 +22,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 const app = new Vue({
     el: '#app'
 });
-
+$(window).on("load",function() {
+     $('.loader-page').fadeOut(1600);
+     $('body').css({'overflow':'visible'});
+   });
 particlesJS("particles-js", {
   "particles": {
     "number": {
