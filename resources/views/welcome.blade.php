@@ -32,11 +32,11 @@
                 <span>Vimolamex</span>
               </div>
               <div class="links-container">
-                <a class="active-menu" href="https://laravel.com/docs">Inicio</a>
-                <a href="https://laracasts.com">Servicios</a>
-                <a href="https://laravel-news.com">Sucursales</a>
-                <a href="https://forge.laravel.com">Contacto</a>
-                <a class="btn btn-outline-primary" href="https://github.com/laravel/laravel">Iniciar Sesión</a>
+                <a class="active-menu" href="#">Inicio</a>
+                <a href="#">Servicios</a>
+                <a href="#">Sucursales</a>
+                <a href="#">Contacto</a>
+                <a class="btn btn-outline-primary" href="#">Iniciar Sesión</a>
               </div>
             </nav>
             <div class="messages-container">
