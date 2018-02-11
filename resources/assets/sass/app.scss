@@ -53,13 +53,15 @@
 }
 
 // Bootstrap
+
 $text-primary-color: white;
-$primary-color:#052958;
+$primary-color:#004E9A;
 $border-box-primary:rgba(112,112,112,.5);
 $border-box-secondary:#7FC4FD;
 $box-primary-color:#BCE0FD;
 $box-secondary-color:#F1F9FF;
 $shadow-primary:0 3px 6px rgba(0,0,0,.16);
+$shadow-box:0 3px 6px rgba(0,0,0,.56);
 %font-text{
  font-family:'Lora',serif;
 }
@@ -72,6 +74,10 @@ body,html{
 }
 h1,h2,h3,h4,h5{
   @extend %font-titles;
+}
+.btn{
+  @extend %font-text;
+  font-weight: bold;  
 }
 .landing{
   overflow: hidden;
@@ -126,6 +132,28 @@ h1,h2,h3,h4,h5{
   filter:blur(0px);
   flex: 2;
 
+}
+.fill-background-login{
+  background-image: url('/../img/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  // filter: blur(1px);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  box-shadow: $shadow-box;
+}
+.color-background{
+  flex: 1;
+  background-color: #00339A;
+  opacity: .3;
+  min-height: 100vh;
+  min-width: 100%;
+}
+.color-background .particles-js-canvas-el{
+  height: 99% !important;
 }
 .menu{
   top: 0%;
@@ -255,7 +283,7 @@ h4.text-contain{
   border-radius: 0 5px 5px 0;
   border-style: solid;
 }
-.cards-service h6{
+h6{
   font-family: 'Lora',serif;
   color: $primary-color;
   margin-top: 20px;
@@ -310,4 +338,12 @@ footer nav a{
 footer .social-footer{
   display: flex;
   justify-content: space-between;
+}
+.title-general {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+article{
+  padding: 2em 0;
 }
