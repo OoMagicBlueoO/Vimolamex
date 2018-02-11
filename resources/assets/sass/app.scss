@@ -59,6 +59,7 @@ $border-box-primary:rgba(112,112,112,.5);
 $border-box-secondary:#7FC4FD;
 $box-primary-color:#BCE0FD;
 $box-secondary-color:#F1F9FF;
+$shadow-primary:0 3px 6px rgba(0,0,0,.16);
 %font-text{
  font-family:'Lora',serif;
 }
@@ -214,7 +215,7 @@ h4.text-contain{
   margin: 0 30px 10px 0;
 }
 .cards-service{
-  margin: 2em 0;
+  margin: 4em 0;
 }
 .cards-service .box-primary{
   border: 1px solid $border-box-secondary;
@@ -280,4 +281,33 @@ h4.text-contain{
   left: -25%;
   width: 200%;
   border: 1px solid $border-box-secondary;
+}
+.cards-service .box-primary img{
+  box-shadow: $shadow-primary;
+  max-width: 100%;
+  border-radius: 100%;
+}
+.info{
+  background-image: url('/../img/info-background.jpg');
+  background-size:12%;
+  padding: 2em 0;
+  color: $text-primary-color;
+  box-shadow: 0 3px 6px rgba(0,0,0,.56);
+  font-size: 1.1em;
+}
+.info img{
+  max-width: 100%;
+}
+footer{
+  padding: 1em 0;
+}
+footer hr{
+  border-top: 1px solid $border-box-primary;
+}
+footer nav a{
+  margin: 0 10px;
+}
+footer .social-footer{
+  display: flex;
+  justify-content: space-between;
 }

@@ -13521,7 +13521,7 @@ h4.text-contain {
 }
 
 .cards-service {
-  margin: 2em 0;
+  margin: 4em 0;
 }
 
 .cards-service .box-primary {
@@ -13596,5 +13596,47 @@ h4.text-contain {
   left: -25%;
   width: 200%;
   border: 1px solid #7FC4FD;
+}
+
+.cards-service .box-primary img {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  max-width: 100%;
+  border-radius: 100%;
+}
+
+.info {
+  background-image: url("/../img/info-background.jpg");
+  background-size: 12%;
+  padding: 2em 0;
+  color: white;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.56);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.56);
+  font-size: 1.1em;
+}
+
+.info img {
+  max-width: 100%;
+}
+
+footer {
+  padding: 1em 0;
+}
+
+footer hr {
+  border-top: 1px solid rgba(112, 112, 112, 0.5);
+}
+
+footer nav a {
+  margin: 0 10px;
+}
+
+footer .social-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
