@@ -77,7 +77,7 @@ h1,h2,h3,h4,h5{
 }
 .btn{
   @extend %font-text;
-  font-weight: bold;  
+  font-weight: bold;
 }
 .landing{
   overflow: hidden;
@@ -149,11 +149,17 @@ h1,h2,h3,h4,h5{
   flex: 1;
   background-color: #00339A;
   opacity: .3;
-  min-height: 100vh;
-  min-width: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
 }
-.color-background .particles-js-canvas-el{
+.fill-background-login #particles-js{
+  display: flex;
+  height: 100vh;
+}
+.fill-background-login .particles-js-canvas-el{
   height: 99% !important;
+  flex: 1
 }
 .menu{
   top: 0%;

@@ -12,6 +12,13 @@
 */
 
 Route::get('/', 'PagesController@home');
-// auth
 
+// auth
 Route::get('Login','AuthController@login');
+Route::get('Register','AuthController@register');
+Route::post('Login','AuthController@loginVerify');
+Route::group(['middleware'=>'admin'],function(){
+  Route::get('Admin', function(){
+    return 'Panel de administrador';
+  });
+});

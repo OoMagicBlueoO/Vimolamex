@@ -29,7 +29,7 @@ return [
     |
     */
 
-    'session' => 'cartalyst_sentinel',
+    'session' => 'Comercializadora_Vimolamex',
 
     /*
     |--------------------------------------------------------------------------
@@ -40,7 +40,7 @@ return [
     |
     */
 
-    'cookie' => 'cartalyst_sentinel',
+    'cookie' => 'Comercializadora_Vimolamex',
 
     /*
     |--------------------------------------------------------------------------
@@ -176,7 +176,7 @@ return [
 
         'model' => 'Cartalyst\Sentinel\Reminders\EloquentReminder',
 
-        'expires' => 14400,
+        'expires' => 28800,
 
         'lottery' => [2, 100],
 

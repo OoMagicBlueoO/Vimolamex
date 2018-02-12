@@ -26,6 +26,16 @@ $(window).on("load",function() {
      $('.loader-page').fadeOut(1600);
      $('body').css({'overflow':'visible'});
    });
+$(document).ready(function () {
+      $('.handler').click(function () {
+          $('.handler').attr('disabled', true);
+          $('.loader-page').fadeIn('slow');
+          $('body').css({'overflow':'hidden'});
+          $('#form').submit();
+          return true;
+      });
+
+  });
 const particlesCont = document.getElementById('particles-js');
 if(particlesCont){
   particlesJS("particles-js", {
