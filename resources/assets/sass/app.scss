@@ -60,6 +60,7 @@ $border-box-primary:rgba(112,112,112,.5);
 $border-box-secondary:#7FC4FD;
 $box-primary-color:#BCE0FD;
 $box-secondary-color:#F1F9FF;
+$content-background:#F0F0F7;
 $shadow-primary:0 3px 6px rgba(0,0,0,.16);
 $shadow-box:0 3px 6px rgba(0,0,0,.56);
 %font-text{
@@ -352,4 +353,97 @@ footer .social-footer{
 }
 article{
   padding: 2em 0;
+}
+.container-menu-dashboard{
+  display: flex;
+  min-height: 100vh;
+}
+.container-menu{
+  padding: 0;
+  min-height: 100vh;
+  background-color:#0D67AE;
+}
+.container-bar{
+  padding: 0;
+}
+.menu-dashboard{
+  padding: 0;
+  position: sticky;
+  top:0;
+}
+.menu-dashboard h6{
+  box-shadow: $shadow-primary;
+  font-size: 1.5em;
+  color: $text-primary-color;
+  padding:15px;
+  margin: 0;
+  background-color:$primary-color;
+}
+.menu-dashboard .list-group{
+  border-radius: 0;
+  background-color: inherit;
+  margin: 10px 0;
+}
+.menu-dashboard .list-group-item{
+  color: $text-primary-color;
+  border:none;
+  background-color: inherit;
+  cursor: pointer;
+  transition: .3s;
+}
+.menu-dashboard .list-group-item a{
+  color: $text-primary-color;
+
+}
+.menu-dashboard .list-group-item.active-list-item{
+  border-left: 4px solid $text-primary-color;
+  background-color: $primary-color;
+  box-shadow: $shadow-primary;
+}
+.menu-dashboard .list-group-item:hover{
+  box-shadow: $shadow-primary;
+  background-color: $primary-color;
+}
+.container-bar article{
+  padding: 2em;
+  background-color: $content-background;
+}
+.top-nav-panel{
+  box-shadow: $shadow-primary;
+  background-color: $text-primary-color;
+  padding: 0 1rem;
+}
+.top-nav-panel i{
+  font-size: 1.3em;
+  padding: 0 .5em;
+}
+.top-nav-panel form{
+  justify-content: space-between;
+}
+.avatar-img{
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  margin-left: 10px;
+}
+.right-top-bar{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.right-top-bar li{
+  padding: 0.5em;
+}
+.right-top-bar i{
+  color: #BCBCCB;
+}
+.top-bar-input{
+  flex:1;
+  border: none;
+  height: 40px;
+  padding:0 1rem;
+}
+h6.title-top{
+  margin: 0 0 1em 0;
+  font-size: 1.5em;
 }

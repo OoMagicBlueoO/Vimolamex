@@ -13698,3 +13698,131 @@ article {
   padding: 2em 0;
 }
 
+.container-menu-dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+
+.container-menu {
+  padding: 0;
+  min-height: 100vh;
+  background-color: #0D67AE;
+}
+
+.container-bar {
+  padding: 0;
+}
+
+.menu-dashboard {
+  padding: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.menu-dashboard h6 {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  font-size: 1.5em;
+  color: white;
+  padding: 15px;
+  margin: 0;
+  background-color: #004E9A;
+}
+
+.menu-dashboard .list-group {
+  border-radius: 0;
+  background-color: inherit;
+  margin: 10px 0;
+}
+
+.menu-dashboard .list-group-item {
+  color: white;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.menu-dashboard .list-group-item a {
+  color: white;
+}
+
+.menu-dashboard .list-group-item.active-list-item {
+  border-left: 4px solid white;
+  background-color: #004E9A;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.menu-dashboard .list-group-item:hover {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  background-color: #004E9A;
+}
+
+.container-bar article {
+  padding: 2em;
+  background-color: #F0F0F7;
+}
+
+.top-nav-panel {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  background-color: white;
+  padding: 0 1rem;
+}
+
+.top-nav-panel i {
+  font-size: 1.3em;
+  padding: 0 .5em;
+}
+
+.top-nav-panel form {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.avatar-img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  margin-left: 10px;
+}
+
+.right-top-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.right-top-bar li {
+  padding: 0.5em;
+}
+
+.right-top-bar i {
+  color: #BCBCCB;
+}
+
+.top-bar-input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+  height: 40px;
+  padding: 0 1rem;
+}
+
+h6.title-top {
+  margin: 0 0 1em 0;
+  font-size: 1.5em;
+}
+

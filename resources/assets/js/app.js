@@ -8,7 +8,8 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-require('particles.js')
+require('particles.js');
+
 /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
 
 /**

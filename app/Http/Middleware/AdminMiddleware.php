@@ -18,7 +18,9 @@ class AdminMiddleware
       if ($user = Sentinel::check())
       {
         if(Sentinel::inRole('admin')){
-          return $next($request);
+          return $next($request,[
+            'user'=>$user,
+          ]);
         }else{
           Sentinel::logout(null, true);
           return redirect('/');

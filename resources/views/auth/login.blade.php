@@ -1,5 +1,5 @@
 {{-- Extendiendo plantilla --}}
-@extends('layouts.panel')
+@extends('layouts.login')
 {{-- Extendiendo Titulo --}}
 @section('title','Iniciar Sesión |')
 {{-- Extendiendo indice en el menu --}}

@@ -17,8 +17,13 @@ Route::get('/', 'PagesController@home');
 Route::get('Login','AuthController@login');
 Route::get('Register','AuthController@register');
 Route::post('Login','AuthController@loginVerify');
+Route::get('Logout', 'AdminController@logout');
+
 Route::group(['middleware'=>'admin'],function(){
-  Route::get('Admin', function(){
-    return 'Panel de administrador';
-  });
+  Route::get('Admin', 'AdminController@dashboard');
+  Route::get('Admin/Siniestros', 'AdminController@siniestros');
+  Route::get('Admin/Calendario', 'AdminController@calendario');
+  Route::get('Admin/Mensajes', 'AdminController@mensajes');
+  Route::get('Admin/Archivos', 'AdminController@archivos');
+  Route::get('Admin/Estadisticas', 'AdminController@estadisticas');
 });
